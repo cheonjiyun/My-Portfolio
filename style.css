@@ -29,6 +29,9 @@ ul, nav, body, p, div{
 header{
   background-color: whitesmoke;
   font-size: 1.2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 
 header li{
@@ -139,10 +142,11 @@ main{
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 4rem;
 }
 
 .intro{
-  padding: 15rem 0;
+  padding: 16rem 0 14rem 0;
 }
 
 .frontdeveloper{
@@ -219,4 +223,32 @@ main{
   border-radius: 100%;
 }
 
+@media screen and (max-width: 652px){
+  .info_contents{
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .info_text{
+    
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+
+  .info_text p{
+    margin: 0.5rem 0;
+  }
+
+  @media screen and (max-width: 350px) {
+    .info_text p{
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .info_text span{
+      padding: 0.5rem 0;
+    }
+  }
+}
 
