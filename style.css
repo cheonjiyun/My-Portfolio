@@ -1,0 +1,161 @@
+ul, nav, body, p{
+  margin: 0;
+  padding: 0;
+}
+
+/* 헤더 */
+
+@font-face {
+  font-family: 'YClover-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/YClover-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NPSfontBold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/NPSfontBold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+header{
+  background-color: whitesmoke;
+  font-size: 1.2rem;
+}
+
+header li{
+  padding: 1.2rem;
+  cursor: pointer;
+  margin-left: 0.6rem;
+  margin-right: 0.6rem;
+  text-align: center;
+}
+
+.header_ul{
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header_ul > div:first-child{
+  font-family: YClover-Bold;  
+}
+
+.header_logo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 5%;
+}
+
+.menu_button{
+  display: none;
+  align-items: center;
+  cursor: pointer;
+  padding-right: 5%;
+}
+
+.menu_button svg{
+  padding: 1.2rem;
+  vertical-align: top;
+}
+
+.menu_button[type=checkbox]{
+  display: none;
+}
+
+.menu_button:checked ~ li{
+  display: block;
+}
+
+.header_menu{
+  display: flex;
+  padding-right: 5%;
+
+  
+}
+
+
+@media screen and (max-width: 700px) {
+  .header_ul{
+    flex-direction: column;
+
+    flex-wrap: nowrap;
+    
+    align-items: stretch;
+  }
+
+  .header_menu{
+    flex-direction: column;
+    background-color: rgb(250, 250, 250);
+    width: 100%;
+  }
+
+  .menu_button{
+    display: inline;
+  }
+  
+  .header_menu li{
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 250px) {
+  .logo_description{
+    display: none;
+  }
+
+  .header_logo{
+    padding-left: 0;    
+    padding-right: 0;
+  }
+
+  .menu_button{
+    display: inline;
+  }
+
+  .header_menu li{
+    display: none;
+  }
+}
+
+
+/* info */
+
+
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro{
+  padding: 15rem 0;
+}
+
+.frontdeveloper{
+  text-align: center;
+  font-family: YClover-Bold;
+  font-size: 5rem;
+}
+
+.jiyun{
+  padding: 1.5rem;
+  text-align: center;
+  font-family: NPSfontBold;
+  font-size: 2.5rem;
+}
+
+.myinfo{
+  width: 100vw;
+  background-color: rgb(235, 243, 235);
+}
+
+hr{
+  width: 100vw;
+}
+
+
