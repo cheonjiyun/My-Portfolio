@@ -1,4 +1,4 @@
-ul, nav, body, p{
+ul, nav, body, p, div{
   margin: 0;
   padding: 0;
 }
@@ -16,6 +16,13 @@ ul, nav, body, p{
   font-family: 'NPSfontBold';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/NPSfontBold.woff2') format('woff2');
   font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SUIT-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+  font-weight: normal;
   font-style: normal;
 }
 
@@ -100,6 +107,8 @@ header li{
   .header_menu li{
     display: none;
   }
+
+
 }
 
 
@@ -139,23 +148,75 @@ main{
 .frontdeveloper{
   text-align: center;
   font-family: YClover-Bold;
-  font-size: 5rem;
+  font-size: 5em;
 }
 
 .jiyun{
-  padding: 1.5rem;
+  padding: 1.5em;
   text-align: center;
   font-family: NPSfontBold;
-  font-size: 2.5rem;
+  font-size: 2.5em;
+}
+
+@media screen and (max-width: 450px) {
+  .intro{
+    font-size: 8px;
+  }
+  
 }
 
 .myinfo{
   width: 100vw;
   background-color: rgb(235, 243, 235);
+  padding: 2rem 0 5rem 0;
 }
 
-hr{
-  width: 100vw;
+.info{
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: YClover-Bold;
+}
+
+.info_contents{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.info_text{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-family: SUIT-Regular;
+  margin-left: 4rem;
+  color: rgb(14, 13, 13);
+}
+
+.info_text *{
+  vertical-align: middle;
+}
+
+.info_text svg{
+  margin: 0 4px;  
+}
+
+.info_text b{
+  margin-right: 8px;  
+}
+
+.info_text a{
+  color: inherit;
+  text-decoration: none;
+}
+
+.info_text a:hover{
+  color: rgb(247, 32, 32);
+}
+
+.profile{
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
 }
 
 
