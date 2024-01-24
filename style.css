@@ -1,4 +1,4 @@
-ul, li, nav, body, p, div{
+ul, li, nav, body, p, div, a{
   margin: 0;
   padding: 0;
 }
@@ -73,23 +73,83 @@ header li{
   vertical-align: top;
 }
 
+@keyframes header_menu_open {
+  from{
+    height: 0;
+  }
+
+  to{
+    height: 7.9rem;
+  }
+}
+
+@keyframes header_menu_close {
+  from{
+    height: 7.9rem;
+  }  
+
+  to{
+    height: 0;
+  }
+}
+
+
 .menu_button[type=checkbox]{
   display: none;
 }
 
-.menu_button:checked ~ li{
+.menu_button:checked ~ .header_menu{
   display: block;
+
+  height: 7.9rem;
+  animation-name: header_menu_open;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-fill-mode: both;
+
 }
 
+
 .header_menu{
+  font-family: SUIT-Regular;
   display: flex;
-  padding-right: 5%;  
+  padding-right: 5%;
+
+  height: 4rem;
+  animation-name: header_menu_close;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-fill-mode: backwards;
+
+  overflow: hidden;
 }
 
 .header_menu a{
+  height: 4rem;
+  display: block;
   text-decoration: none;
-  color: rgb(14, 13, 13);
+  color: rgb(14, 13, 13);  
+
 }
+
+
+@media screen and (min-width: 701px) {
+  .header_menu a{
+    display: inline-block;
+  }
+  
+  .menu_button:checked ~ .header_menu{
+    height: 4rem;
+
+    animation-name: header_menu_close;
+    animation-duration: 0s;
+    animation-timing-function: ease-out;
+  }
+  
+}
+
 
 
 @media screen and (max-width: 700px) {
@@ -111,8 +171,8 @@ header li{
     display: inline;
   }
   
-  .header_menu li{
-    display: none;
+  .header_menu{
+    height: 0;
   }
 
 
@@ -133,11 +193,10 @@ header li{
     display: inline;
   }
 
-  .header_menu li{
-    display: none;
+  .header_menu{
+    height: 0;
   }
 }
-
 
 /* info */
 
