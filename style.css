@@ -30,7 +30,7 @@ header{
   background-color: whitesmoke;
   box-shadow: 0 3px 3px -1.5px rgba(50, 50, 50, 0.2);
   font-size: 1.2rem;
-  position: fixed;
+  position: sticky;
   width: 100vw;
   top: 0;
 }
@@ -145,6 +145,7 @@ header li{
 
     animation-name: header_menu_close;
     animation-duration: 0s;
+    animation-delay: -3s;
     animation-timing-function: ease-out;
   }
   
