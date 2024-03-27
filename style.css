@@ -336,6 +336,11 @@ main {
     font-family: YClover-Bold;
 }
 
+.project_container {
+    margin-top: 50px;
+    margin-bottom: 120px;
+}
+
 .project_name {
     margin: 0;
 }
